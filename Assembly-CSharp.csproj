@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02. Scripts\BallCtrl.cs" />
+    <Compile Include="Assets\02. Scripts\CompanyCtrl.cs" />
     <Compile Include="Assets\02. Scripts\FireCtrl.cs" />
+    <Compile Include="Assets\02. Scripts\FireTPS.cs" />
     <Compile Include="Assets\02. Scripts\FollowCam.cs" />
     <Compile Include="Assets\02. Scripts\GameMgr1.cs" />
     <Compile Include="Assets\02. Scripts\GameMgr2.cs" />
@@ -76,14 +78,16 @@
     <Compile Include="Assets\FullTiltBoogie\RotateFlareHolder.cs" />
     <Compile Include="Assets\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
     <Compile Include="Assets\GreenForest\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Single TPS Controller\Scripts\ControladorDePersonagem.cs" />
+    <Compile Include="Assets\Single TPS Controller\Scripts\ControleOrbital.cs" />
     <None Include="Assets\Charmander\Tag.txt" />
-    <None Include="Assets\Pikachu\Tag.txt" />
-    <None Include="Assets\Pokemon XY\Calem\Tag.txt" />
+    <None Include="Assets\05. Models\Pikachu\Tag.txt" />
+    <None Include="Assets\05. Models\Pokemon XY\Calem\Tag.txt" />
     <None Include="Assets\05. Models\Ball\Tag.txt" />
     <None Include="Assets\FullTiltBoogie\Helpers\readme.txt" />
     <None Include="Assets\GreenForest\Standard Assets\Skyboxes\_skybox info.txt" />
     <None Include="Assets\Wii - Super Smash Bros Brawl - Pokemon Trainer\Credit.txt" />
-    <None Include="Assets\Squirtle\Tag.txt" />
+    <None Include="Assets\05. Models\Squirtle\Tag.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/donggunlee/Desktop/Project/Unity/GoHackBurn/PocketShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

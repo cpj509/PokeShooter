@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MonsterCtrl : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class MonsterCtrl : MonoBehaviour
 
     private Transform monsterTr;
     private Transform playerTr;
-    private UnityEngine.AI.NavMeshAgent nvAgent;
+    private NavMeshAgent nvAgent;
     private Animator animator;
     private GameUI gameUI;
 
@@ -78,12 +79,14 @@ public class MonsterCtrl : MonoBehaviour
             {
                 case MonsterState.idle:
                     nvAgent.Stop();
+                    //nvAgent.isStopped = true;
                     animator.SetBool("IsTrace", false);
                     break;
 
                 case MonsterState.trace:
                     nvAgent.destination = playerTr.position;
                     nvAgent.Resume();
+                    //nvAgent.isStopped = true;
 
                     animator.SetBool("IsAttack", false);
                     animator.SetBool("IsTrace", true);
@@ -92,6 +95,7 @@ public class MonsterCtrl : MonoBehaviour
                 case MonsterState.attack:
                     //추적 중지
                     nvAgent.Stop();
+                    //nvAgent.isStopped = true;
                     animator.SetBool("IsAttack", true);
                     break;
             }
@@ -127,6 +131,7 @@ public class MonsterCtrl : MonoBehaviour
         isDie = true;
         monsterState = MonsterState.die;
         nvAgent.Stop();
+        //nvAgent.isStopped = true;
         animator.SetTrigger("IsDie");
 
         gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
@@ -164,6 +169,7 @@ public class MonsterCtrl : MonoBehaviour
         Debug.Log("Wow!");
         StopAllCoroutines();
         nvAgent.Stop();
+        //nvAgent.isStopped = true;
         animator.SetTrigger("IsPlayerDie");
     }
 }

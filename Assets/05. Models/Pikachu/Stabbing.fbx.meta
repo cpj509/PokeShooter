@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: f4bc22e0eb2c447cf9ef9b6ae2bde33d
+timeCreated: 1507688831
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: EndFeeler
+    100002: EndHead
+    100004: EndHips
+    100006: EndLEar3
+    100008: EndLFoot
+    100010: EndLHand
+    100012: EndLToe
+    100014: EndREar3
+    100016: EndRFoot
+    100018: EndRHand
+    100020: EndRToe
+    100022: EndTail3
+    100024: Feeler
+    100026: Head
+    100028: Hips
+    100030: LArm
+    100032: LEar1
+    100034: LEar2
+    100036: LEar3
+    100038: LFoot
+    100040: LForeArm
+    100042: LHand
+    100044: LLeg
+    100046: LShoulder
+    100048: LThigh
+    100050: LToe
+    100052: Origin
+    100054: PikachuM
+    100056: pm0025_00_BodySkin
+    100058: pm0025_00_pikachu
+    100060: pm0025_00_SippoSkin
+    100062: RArm
+    100064: REar1
+    100066: REar2
+    100068: REar3
+    100070: RFoot
+    100072: RForeArm
+    100074: RHand
+    100076: RLeg
+    100078: RShoulder
+    100080: RThigh
+    100082: RToe
+    100084: Spine1
+    100086: Spine2
+    100088: //RootNode
+    100090: Tail1
+    100092: Tail2
+    100094: Tail3
+    100096: VriVis00
+    100098: Waist
+    400000: EndFeeler
+    400002: EndHead
+    400004: EndHips
+    400006: EndLEar3
+    400008: EndLFoot
+    400010: EndLHand
+    400012: EndLToe
+    400014: EndREar3
+    400016: EndRFoot
+    400018: EndRHand
+    400020: EndRToe
+    400022: EndTail3
+    400024: Feeler
+    400026: Head
+    400028: Hips
+    400030: LArm
+    400032: LEar1
+    400034: LEar2
+    400036: LEar3
+    400038: LFoot
+    400040: LForeArm
+    400042: LHand
+    400044: LLeg
+    400046: LShoulder
+    400048: LThigh
+    400050: LToe
+    400052: Origin
+    400054: PikachuM
+    400056: pm0025_00_BodySkin
+    400058: pm0025_00_pikachu
+    400060: pm0025_00_SippoSkin
+    400062: RArm
+    400064: REar1
+    400066: REar2
+    400068: REar3
+    400070: RFoot
+    400072: RForeArm
+    400074: RHand
+    400076: RLeg
+    400078: RShoulder
+    400080: RThigh
+    400082: RToe
+    400084: Spine1
+    400086: Spine2
+    400088: //RootNode
+    400090: Tail1
+    400092: Tail2
+    400094: Tail3
+    400096: VriVis00
+    400098: Waist
+    4300000: PikachuM
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: PikachuM
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PikachuM
+        weight: 1
+      - path: pm0025_00_pikachu
+        weight: 1
+      - path: pm0025_00_pikachu/Origin
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/EndHips
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/Feeler
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/Feeler/EndFeeler
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/LThigh
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/LThigh/LLeg
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/LThigh/LLeg/LFoot
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/LThigh/LLeg/LFoot/EndLFoot
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/LThigh/LLeg/LFoot/LToe
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/LThigh/LLeg/LFoot/LToe/EndLToe
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/RThigh
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/RThigh/RLeg
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/RThigh/RLeg/RFoot
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/RThigh/RLeg/RFoot/EndRFoot
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/RThigh/RLeg/RFoot/RToe
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/RThigh/RLeg/RFoot/RToe/EndRToe
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/Tail1
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/Tail1/Tail2
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Hips/Tail1/Tail2/Tail3/EndTail3
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/EndHead
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/LEar1
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/LEar1/LEar2
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/LEar1/LEar2/LEar3
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/LEar1/LEar2/LEar3/EndLEar3
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/REar1
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/REar1/REar2
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/REar1/REar2/REar3
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/Head/REar1/REar2/REar3/EndREar3
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/LShoulder
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/LShoulder/LArm
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/LShoulder/LArm/LForeArm
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/LShoulder/LArm/LForeArm/LHand
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/LShoulder/LArm/LForeArm/LHand/EndLHand
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/RShoulder
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/RShoulder/RArm
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/RShoulder/RArm/RForeArm
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/RShoulder/RArm/RForeArm/RHand
+        weight: 1
+      - path: pm0025_00_pikachu/Origin/Waist/Spine1/Spine2/RShoulder/RArm/RForeArm/RHand/EndRHand
+        weight: 1
+      - path: pm0025_00_pikachu/pm0025_00_BodySkin
+        weight: 1
+      - path: pm0025_00_pikachu/VriVis00
+        weight: 1
+      - path: pm0025_00_pikachu/VriVis00/pm0025_00_SippoSkin
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

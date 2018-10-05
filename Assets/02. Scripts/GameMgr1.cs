@@ -27,6 +27,8 @@ public class GameMgr1 : MonoBehaviour
 
         for (int i = 0; i < maxMonster; i++)
         {
+            //int idx = Random.Range(0, monsterPrefab);
+            //transform.GetChild(idx).gameObject.SetActive(true);
             //몬스터 프리팹 생성
             GameObject monster = (GameObject)Instantiate(monsterPrefab);
             //생성한 몬스터 이름설정
