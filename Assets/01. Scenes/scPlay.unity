@@ -2426,6 +2426,10 @@ Prefab:
       propertyPath: m_Name
       value: Center
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 83ab8d911819d4fa2ae4fbe8ab828135, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ab8d911819d4fa2ae4fbe8ab828135, type: 3}
   m_IsPrefabAsset: 0
