@@ -16,6 +16,8 @@ public class MonsterCtrl : MonoBehaviour
     private Animator animator;
     private GameUI gameUI;
 
+    public float company = 1.0f;
+
     //추적을 시작할 거리
     public float traceDist = 10.0f;
 	  //공격을 시작할 거리
@@ -143,6 +145,8 @@ public class MonsterCtrl : MonoBehaviour
         gameUI.DispScore(1);
 
         StartCoroutine(this.PushObjectPool());
+
+        //company확률로 주인공 뒤에 스
     }
 
     IEnumerator PushObjectPool()
