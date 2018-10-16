@@ -11,7 +11,7 @@ public class BallCtrl : MonoBehaviour {
 
 
 	void Start () {
-		GetComponent<Rigidbody> ().AddForce(transform.forward * speed);
+		//GetComponent<Rigidbody> ().AddForce(transform.forward * speed);
         SoundMgr.instance.PlaySound(SoundMgr.instance.soundBallThrowing);
     }
 
