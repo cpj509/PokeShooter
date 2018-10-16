@@ -123,6 +123,23 @@ public class MonsterCtrl : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Ball"){
+            //hp차감
+            hp -= other.gameObject.GetComponent<BallCtrl>().damage;
+            if (hp <= 0)
+            {
+                MonsterDie();
+            }
+            print("!!!");
+            //삭제
+            Destroy(other.gameObject);
+            //
+            animator.SetTrigger("IsHit");
+        }
+    }
+
     void MonsterDie()
     {
 

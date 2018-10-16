@@ -107,7 +107,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsAttack
+    m_ConditionEvent: IsTrace
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102808211092231650}
@@ -203,7 +203,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsAttack
+    m_ConditionEvent: IsTrace
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102137501446980634}
@@ -483,16 +483,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102808211092231650}
-    m_Position: {x: 276, y: -72, z: 0}
+    m_Position: {x: 252, y: -48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102137501446980634}
-    m_Position: {x: 396, y: 48, z: 0}
+    m_Position: {x: 252, y: 24, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102287700934636442}
     m_Position: {x: 288, y: 192, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102663385817951378}
-    m_Position: {x: 432, y: 144, z: 0}
+    m_Position: {x: 336, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102998930905775748}
     m_Position: {x: 48, y: -48, z: 0}

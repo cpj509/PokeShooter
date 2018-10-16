@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour {
 
     public Text txtScore;
-    public Slider sliderHP;
+    public Text txtGoal;
+    public Image sliderHP;
+    public Text txtHP;
 	public GameObject txtSuccess;
 	//public Text txtFail;
-	public Text txtGoal;
 
     //누적 점수
     private int totScore = 0;
@@ -17,6 +18,7 @@ public class GameUI : MonoBehaviour {
     void Start()
     {
         DispScore(0);
+        DispHP(100);
 		txtSuccess.SetActive (false);
     }
 
@@ -31,6 +33,9 @@ public class GameUI : MonoBehaviour {
 
     public void DispHP(int hp)
     {
-        sliderHP.value = hp;
+        if (hp>= 0) {
+            sliderHP.fillAmount = hp / 100f;
+            txtHP.text = hp.ToString();
+        }
     }
 }

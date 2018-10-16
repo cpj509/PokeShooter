@@ -16,6 +16,9 @@ public class GameMgr1 : MonoBehaviour
     public bool isGameOver = false;
     public static GameMgr1 instance = null;
 
+    public GameObject ShopScreen;
+    public bool isShopScreen = false;
+
     void Awake()
     {
         instance = this;
@@ -42,6 +45,22 @@ public class GameMgr1 : MonoBehaviour
             StartCoroutine(this.CreateMonster());//몬스터 생성 코루틴 함수 호출
         }
     }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.T)){
+            if(!isShopScreen){
+                ShopScreen.SetActive(true);
+                isShopScreen = true;
+            }
+            else{
+                ShopScreen.SetActive(false);
+                isShopScreen = false;
+            }
+
+        }
+    }
+
     //몬스터 생성 코루틴 함수
     IEnumerator CreateMonster()
     {

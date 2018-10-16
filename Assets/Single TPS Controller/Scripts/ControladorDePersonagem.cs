@@ -55,7 +55,7 @@ public class ControladorDePersonagem : MonoBehaviour {
 
     private void Anima_Personagem()
     {
-        animacao.SetInteger("Estado", estado);
+        //animacao.SetInteger("Estado", estado);
     }
 
     private void Controle()

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIMgr : MonoBehaviour {
 
-	public void OnClickStartBtn()
+    public void OnClickStartBtn()
     {
         SceneManager.LoadScene("gfPlay1");   
 

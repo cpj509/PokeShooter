@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{D2282D55-B123-FB38-33D8-A2AD4850CB83}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02. Scripts/SoundMgr.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02. Scripts/PlayerCtrl.cs">
     <Files>
       <File FileName="Assets/02. Scripts/MonsterCtrl.cs" Line="149" Column="30" />
       <File FileName="Assets/02. Scripts/GameMgr2.cs" Line="1" Column="1" />
@@ -10,6 +10,7 @@
       <File FileName="Assets/02. Scripts/BallCtrl.cs" Line="15" Column="34" />
       <File FileName="Assets/Single TPS Controller/Scripts/ControladorDePersonagem.cs" Line="1" Column="1" />
       <File FileName="Assets/02. Scripts/SoundMgr.cs" Line="1" Column="1" />
+      <File FileName="Assets/02. Scripts/PlayerCtrl.cs" Line="46" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
