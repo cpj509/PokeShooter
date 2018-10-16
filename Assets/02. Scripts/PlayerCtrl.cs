@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [System.Serializable]
@@ -32,8 +33,12 @@ public class PlayerCtrl : MonoBehaviour {
 
 	public GameObject txtFail;
 
+    bool canRestart = false;
+
 
     void Start () {
+        canRestart = false;
+
         tr = GetComponent<Transform>();
 
         _animation = GetComponentInChildren<Animation>();
@@ -48,6 +53,14 @@ public class PlayerCtrl : MonoBehaviour {
 
 
 	void Update () {
+
+        if(canRestart){
+            if (Input.GetKeyDown(KeyCode.R)) {
+                SceneManager.LoadScene("gfPlay1");
+            }
+        }
+
+
         h = Input.GetAxis ("Horizontal"); // InputManager의 "Horizontal"에 설정된 값을 입력했을때 -1 ~ +1 까지의 값을 반환
         v = Input.GetAxis ("Vertical"); // InputManager의 "Vertical"에 설정된 값을 입력했을때 -1 ~ +1 까지의 값을 반환
 
@@ -108,5 +121,6 @@ public class PlayerCtrl : MonoBehaviour {
 		Debug.Log ("Player Die!!");
 		OnPlayerDie();
 		txtFail.SetActive (true);
+        canRestart = true;
 	}
 }
