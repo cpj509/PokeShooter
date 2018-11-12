@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313682718553488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.48688, y: -129.79494, z: 26.657227}
+  m_LocalPosition: {x: 77.503586, y: -131.69963, z: 32.50982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4464053695734298}
@@ -115,7 +115,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -149,9 +149,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterState: 0
-  company: 1
   traceDist: 10
   attackDist: 2
+  perCompany: 0.5
+  companyMonster: {fileID: 1719717971014128, guid: b6210d69297414937bd051686f7a7385,
+    type: 2}
+  playerPos: {fileID: 0}
 --- !u!135 &135398920115040568
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -192,10 +195,10 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2efd18455add4350965b837ed3a32df, type: 2}
-  - {fileID: 2100000, guid: bcdba40446ef146d285d39df80c0f2bb, type: 2}
-  - {fileID: 2100000, guid: b2e8720163020460490e175f10f9d510, type: 2}
-  - {fileID: 2100000, guid: dc4d73e6709ce48cdb114828ce85730a, type: 2}
+  - {fileID: 2100000, guid: 5d544955365e3493e884efedd0daecc7, type: 2}
+  - {fileID: 2100000, guid: 4193cc4d158da45f38f799f0dee5091a, type: 2}
+  - {fileID: 2100000, guid: 109a6edb0284642349cd513c029d8e88, type: 2}
+  - {fileID: 2100000, guid: 8645b5419a286460ba0d4eeb28f918f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

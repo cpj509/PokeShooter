@@ -19,6 +19,8 @@ public class GameMgr1 : MonoBehaviour
     public GameObject ShopScreen;
     public bool isShopScreen = false;
 
+    public int idxCompany = 0;
+
     void Awake()
     {
         instance = this;
@@ -59,6 +61,10 @@ public class GameMgr1 : MonoBehaviour
             }
 
         }
+    }
+
+    public void AddCompany(){
+        idxCompany++;
     }
 
     //몬스터 생성 코루틴 함수

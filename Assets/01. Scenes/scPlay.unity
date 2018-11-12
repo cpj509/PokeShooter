@@ -165,6 +165,7 @@ MonoBehaviour:
   _animation: {fileID: 0}
   hp: 100
   txtFail: {fileID: 0}
+  idxCompany: 0
 --- !u!1 &35069746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100156, guid: fca91eb0c88674532bbc785186683d81,
@@ -210,6 +211,7 @@ MonoBehaviour:
   _animation: {fileID: 0}
   hp: 100
   txtFail: {fileID: 0}
+  idxCompany: 0
 --- !u!4 &35069750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400156, guid: fca91eb0c88674532bbc785186683d81,
@@ -724,9 +726,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtScore: {fileID: 848542914}
-  sliderHP: {fileID: 1595174941}
-  txtSuccess: {fileID: 0}
   txtGoal: {fileID: 0}
+  sliderHP: {fileID: 0}
+  txtHP: {fileID: 0}
+  txtSuccess: {fileID: 0}
 --- !u!4 &391809887
 Transform:
   m_ObjectHideFlags: 0
@@ -1959,6 +1962,9 @@ MonoBehaviour:
   createTime: 2
   maxMonster: 5
   isGameOver: 0
+  ShopScreen: {fileID: 0}
+  isShopScreen: 0
+  idxCompany: 0
 --- !u!1 &1541701819
 GameObject:
   m_ObjectHideFlags: 0

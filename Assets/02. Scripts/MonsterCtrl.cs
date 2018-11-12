@@ -16,8 +16,6 @@ public class MonsterCtrl : MonoBehaviour
     private Animator animator;
     private GameUI gameUI;
 
-    public float company = 1.0f;
-
     //추적을 시작할 거리
     public float traceDist = 10.0f;
 	  //공격을 시작할 거리
@@ -26,6 +24,11 @@ public class MonsterCtrl : MonoBehaviour
     private int hp = 100;
     //초기 생존 상태
     private bool isDie = false;
+
+    //동료로 만들기 위한 변수들
+    public float perCompany =  1.0f;
+    public GameObject companyMonster;
+    public GameObject playerPos;
   
     void Awake()
     {
@@ -35,6 +38,8 @@ public class MonsterCtrl : MonoBehaviour
 
         animator = this.gameObject.GetComponent<Animator>();
         gameUI = GameObject.Find("GameUI").GetComponent<GameUI>();
+
+        playerPos = GameObject.FindWithTag("Player");
     }
 
     void OnEnable()
@@ -163,7 +168,16 @@ public class MonsterCtrl : MonoBehaviour
 
         StartCoroutine(this.PushObjectPool());
 
-        //company확률로 주인공 뒤에 스
+        //company확률로 주인공 뒤에 스폰
+        if(Random.Range(0.0f,1.0f) <= perCompany && GameMgr1.instance.idxCompany < 3){
+            Debug.Log("Die!!");
+            Transform comPos = playerPos.transform;
+            GameMgr1.instance.AddCompany();
+            //comPos.position += Vector3.right*3;
+            //comPos.position += Vector3.back*3;
+            Instantiate(companyMonster, comPos.position + Vector3.right*3, comPos.rotation);
+
+        }
     }
 
     IEnumerator PushObjectPool()

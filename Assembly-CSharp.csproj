@@ -257,6 +257,7 @@
     <None Include="Assets\Charmander\Tag.txt" />
     <None Include="Assets\05. Models\Pikachu\Tag.txt" />
     <None Include="Assets\05. Models\Pokemon XY\Calem\Tag.txt" />
+    <None Include="Assets\06. Monsters\Pikachu\Tag.txt" />
     <None Include="Assets\05. Models\Ball\Tag.txt" />
     <None Include="Assets\FullTiltBoogie\Helpers\readme.txt" />
     <None Include="Assets\GreenForest\Standard Assets\Skyboxes\_skybox info.txt" />

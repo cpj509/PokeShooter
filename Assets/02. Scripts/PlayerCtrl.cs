@@ -35,6 +35,9 @@ public class PlayerCtrl : MonoBehaviour {
 
     bool canRestart = false;
 
+    //For company
+    public int idxCompany = 0;
+
 
     void Start () {
         canRestart = false;
@@ -51,6 +54,12 @@ public class PlayerCtrl : MonoBehaviour {
 		txtFail.SetActive (false);
     }
 
+    //add Company
+    void AddCompany(){
+        if(idxCompany < 3){
+            idxCompany++;
+        }
+    }
 
 	void Update () {
 
