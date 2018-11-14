@@ -257,11 +257,14 @@
     <None Include="Assets\Charmander\Tag.txt" />
     <None Include="Assets\05. Models\Pikachu\Tag.txt" />
     <None Include="Assets\05. Models\Pokemon XY\Calem\Tag.txt" />
+    <None Include="Assets\06. Monsters\Gengar\Tag.txt" />
+    <None Include="Assets\06. Monsters\Charmander\Tag.txt" />
     <None Include="Assets\06. Monsters\Pikachu\Tag.txt" />
     <None Include="Assets\05. Models\Ball\Tag.txt" />
     <None Include="Assets\FullTiltBoogie\Helpers\readme.txt" />
     <None Include="Assets\GreenForest\Standard Assets\Skyboxes\_skybox info.txt" />
     <None Include="Assets\04. Images\Simple UI\Fonts\OFL.txt" />
+    <None Include="Assets\06. Monsters\Poliwhirl\Tag.txt" />
     <None Include="Assets\Wii - Super Smash Bros Brawl - Pokemon Trainer\Credit.txt" />
     <None Include="Assets\CactusPack\Shaders\Basic_Rimlight.shader" />
     <None Include="Assets\05. Models\Squirtle\Tag.txt" />
