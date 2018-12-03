@@ -21,6 +21,8 @@ public class GameMgr1 : MonoBehaviour
 
     public int idxCompany = 0;
 
+    public GameObject companyAttack = null;
+
     void Awake()
     {
         instance = this;
@@ -28,24 +30,28 @@ public class GameMgr1 : MonoBehaviour
   
     void Start()
     {
-        points = GameObject.Find("SpawnPoint1").GetComponentsInChildren<Transform>();
+        Debug.Log("Stage : " + GameData.m_stage);
+        if(GameData.m_stage != 2){
+            points = GameObject.Find("SpawnPoint1").GetComponentsInChildren<Transform>();
 
-        for (int i = 0; i < maxMonster; i++)
-        {
-            //int idx = Random.Range(0, monsterPrefab);
-            //transform.GetChild(idx).gameObject.SetActive(true);
-            //몬스터 프리팹 생성
-            GameObject monster = (GameObject)Instantiate(monsterPrefab);
-            //생성한 몬스터 이름설정
-            monster.name = "Monster_" + i.ToString();
-            monster.SetActive(false);
-            monsterPool.Add(monster);
+            for (int i = 0; i < maxMonster; i++)
+            {
+                //int idx = Random.Range(0, monsterPrefab);
+                //transform.GetChild(idx).gameObject.SetActive(true);
+                //몬스터 프리팹 생성
+                GameObject monster = (GameObject)Instantiate(monsterPrefab);
+                //생성한 몬스터 이름설정
+                monster.name = "Monster_" + i.ToString();
+                monster.SetActive(false);
+                monsterPool.Add(monster);
+            }
+
+            if (points.Length > 0)
+            {
+                StartCoroutine(this.CreateMonster());//몬스터 생성 코루틴 함수 호출
+            }
         }
 
-        if (points.Length > 0)
-        {
-            StartCoroutine(this.CreateMonster());//몬스터 생성 코루틴 함수 호출
-        }
     }
 
     void Update()
@@ -60,6 +66,10 @@ public class GameMgr1 : MonoBehaviour
                 isShopScreen = false;
             }
 
+        }
+
+        if(companyAttack != null){
+            Debug.Log("ATTACK");
         }
     }
 

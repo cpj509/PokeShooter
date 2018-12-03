@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class FireTPS : MonoBehaviour {
 
-    public GameObject bulletPrefab;
+    public GameObject[] bulletPrefab;
     public Transform bulletSpawn;
+
+    private GameObject bul;
+
+    private void Start()
+    {
+        bul = bulletPrefab[GameData.m_ballIdx];
+    }
 
     void Update()
     {
@@ -16,7 +23,7 @@ public class FireTPS : MonoBehaviour {
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) /* || Input.GetMouseButtonDown(0)*/)
         {
             Fire();
         }
@@ -27,7 +34,7 @@ public class FireTPS : MonoBehaviour {
     {
         // Create the Bullet from the Bullet Prefab
         var bullet = (GameObject)Instantiate(
-            bulletPrefab,
+            bul,
             bulletSpawn.position,
             bulletSpawn.rotation);
 

@@ -38,6 +38,7 @@ public class PlayerCtrl : MonoBehaviour {
     //For company
     public int idxCompany = 0;
 
+    public GameObject[] companyPrefabs;
 
     void Start () {
         canRestart = false;
@@ -52,6 +53,19 @@ public class PlayerCtrl : MonoBehaviour {
         gameUI = GameObject.Find("GameUI").GetComponent<GameUI>();
 
 		txtFail.SetActive (false);
+
+        for (int i = 0; i < companyPrefabs.Length; i++)
+        {
+            if (GameData.m_companyArray[i])
+            {
+                Transform comPos = transform;
+                if(i == 0)
+                    Instantiate(companyPrefabs[i], comPos.position + Vector3.right * 3, comPos.rotation);
+                else
+                    Instantiate(companyPrefabs[i], comPos.position + Vector3.left * 3, comPos.rotation);
+                gameUI.SetCompanyImage();
+            }
+        }
     }
 
     //add Company
@@ -123,6 +137,13 @@ public class PlayerCtrl : MonoBehaviour {
 				PlayerDie ();
 			}
 		}
+
+        if(coll.gameObject.tag == "COIN"){
+            Destroy(coll.gameObject);
+            GameData.m_gold += 5;
+            gameUI.DisGold();
+            //sound add
+        }
 	}
 
 	void PlayerDie()

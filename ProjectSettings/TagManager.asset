@@ -8,6 +8,10 @@ TagManager:
   - PUNCH
   - MONSTER
   - COMPANY
+  - COMPANYATTACK
+  - COIN
+  - Floor
+  - WALL
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class MonsterCtrl : MonoBehaviour
 {
 
-    public enum MonsterState { idle, trace, attack, die };
+    public enum MonsterState { idle, trace, attack, die, enemy };
 
     public MonsterState monsterState = MonsterState.idle;
 
@@ -29,6 +29,8 @@ public class MonsterCtrl : MonoBehaviour
     public float perCompany =  1.0f;
     public GameObject companyMonster;
     public GameObject playerPos;
+
+    public GameObject CoinPrefabs;
   
     void Awake()
     {
@@ -114,15 +116,32 @@ public class MonsterCtrl : MonoBehaviour
     {
         if (coll.gameObject.tag == "Ball")
         {
+            GameMgr1.instance.companyAttack = gameObject;
             //hp차감
             hp -= coll.gameObject.GetComponent<BallCtrl>().damage;
             if (hp <= 0)
             {
                 MonsterDie();
+                //GameMgr1.instance.companyAttack = null;
             }
             print("!!!");
             //삭제
             Destroy(coll.gameObject);
+            //
+            animator.SetTrigger("IsHit");
+
+
+        }
+
+        if(coll.gameObject.tag == "COMPANYATTACK"){
+            hp -= 10;
+
+            if (hp <= 0)
+            {
+                MonsterDie();
+                //GameMgr1.instance.companyAttack = null;
+            }
+            print("!!!!!");
             //
             animator.SetTrigger("IsHit");
         }
@@ -131,6 +150,7 @@ public class MonsterCtrl : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Ball"){
+            GameMgr1.instance.companyAttack = gameObject;
             //hp차감
             hp -= other.gameObject.GetComponent<BallCtrl>().damage;
             if (hp <= 0)
@@ -143,10 +163,42 @@ public class MonsterCtrl : MonoBehaviour
             //
             animator.SetTrigger("IsHit");
         }
+
+        if (other.gameObject.tag == "COMPANYATTACK")
+        {
+            hp -= 10;
+            Debug.Log("hp : " + hp);
+            if (hp < 0)
+            {
+                MonsterDie();
+                //GameMgr1.instance.companyAttack = null;
+            }
+            print("!!!!!");
+            //
+            animator.SetTrigger("IsHit");
+        }
+
+        //if (other.gameObject.tag == "PUNCH")
+        //{
+        //    hp -= 10;
+
+        //    if (hp <= 0)
+        //    {
+        //        MonsterDie();
+        //        GameMgr1.instance.companyAttack = null;
+        //    }
+        //    print("!!!!!");
+        //    //
+        //    animator.SetTrigger("IsHit");
+        //}
     }
 
     void MonsterDie()
     {
+        Debug.Log("MONSTER DIE!!!");
+        if(gameObject == GameMgr1.instance.companyAttack){
+            GameMgr1.instance.companyAttack = null;
+        }
 
         gameObject.tag = "Untagged";
 
@@ -169,14 +221,20 @@ public class MonsterCtrl : MonoBehaviour
         StartCoroutine(this.PushObjectPool());
 
         //company확률로 주인공 뒤에 스폰
-        if(Random.Range(0.0f,1.0f) <= perCompany && GameMgr1.instance.idxCompany < 3){
+        if(Random.Range(0.0f,1.0f) <= perCompany 
+           && GameData.m_companyArray[GameData.m_stage] == false){
             Debug.Log("Die!!");
+            GameData.m_companyArray[GameData.m_stage] = true;
             Transform comPos = playerPos.transform;
             GameMgr1.instance.AddCompany();
             //comPos.position += Vector3.right*3;
             //comPos.position += Vector3.back*3;
             Instantiate(companyMonster, comPos.position + Vector3.right*3, comPos.rotation);
-
+            gameUI.SetCompanyImage();
+        }
+        //코인 스폰
+        else{
+            Instantiate(CoinPrefabs, transform.position, transform.rotation);
         }
     }
 

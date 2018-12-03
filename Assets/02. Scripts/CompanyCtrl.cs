@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class CompanyCtrl : MonoBehaviour {
 
-    public enum CompanyState { idle, trace, attack, die };
+    public enum CompanyState { idle, trace, attack, die, enemy};
     public CompanyState companyState = CompanyState.idle;
 
     private Transform playerTr;
@@ -16,6 +16,7 @@ public class CompanyCtrl : MonoBehaviour {
     public float traceDist = 5.0f;
 
     //공격 혹은 피격
+    private Transform enemyTr = null;
 
     // Use this for initialization
     void Awake () {
@@ -43,12 +44,22 @@ public class CompanyCtrl : MonoBehaviour {
 
             float dist = Vector3.Distance(playerTr.position, gameObject.transform.position);
 
-            if(dist >= traceDist){
-                companyState = CompanyState.trace;
+            if (GameMgr1.instance.companyAttack == null){
+                enemyTr = null;
+                if (dist >= traceDist)
+                {
+                    companyState = CompanyState.trace;
+                }
+                else
+                {
+                    companyState = CompanyState.idle;
+                }
             }
             else{
-                companyState = CompanyState.idle;
+                enemyTr = GameMgr1.instance.companyAttack.transform;
+                companyState = CompanyState.enemy;
             }
+            Debug.Log("Target : " + GameMgr1.instance.companyAttack);
         }
     }
 
@@ -57,6 +68,7 @@ public class CompanyCtrl : MonoBehaviour {
             switch(companyState){
                 case CompanyState.idle:
                     nvAgent.isStopped = true;
+                    animator.SetBool("IsTrace", false);
                     break;
                 case CompanyState.trace:
                     nvAgent.destination = playerTr.position;
@@ -64,6 +76,12 @@ public class CompanyCtrl : MonoBehaviour {
 
                     animator.SetBool("IsAttack", false);
                     animator.SetBool("IsTrace", true);
+                    break;
+                case CompanyState.enemy:
+                    nvAgent.destination = enemyTr.position;
+                    nvAgent.isStopped = false;
+                    animator.SetBool("IsTrace",false);
+                    animator.SetBool("IsAttack", true);
                     break;
             }
             yield return null;
@@ -81,6 +99,15 @@ public class CompanyCtrl : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
+        //if(GameMgr1.instance.companyAttack != null){
+        //    enemyTr = GameMgr1.instance.companyAttack.transform;
+        //    AttackEnemy();
+        //}
+
 	}
+
+    void AttackEnemy(){
+        //Debug.Log("Attack");
+        
+    }
 }

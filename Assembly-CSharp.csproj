@@ -62,16 +62,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02. Scripts\BallCtrl.cs" />
+    <Compile Include="Assets\02. Scripts\BossCtrl.cs" />
+    <Compile Include="Assets\02. Scripts\BossManager.cs" />
     <Compile Include="Assets\02. Scripts\CompanyCtrl.cs" />
     <Compile Include="Assets\02. Scripts\FireCtrl.cs" />
     <Compile Include="Assets\02. Scripts\FireTPS.cs" />
     <Compile Include="Assets\02. Scripts\FollowCam.cs" />
+    <Compile Include="Assets\02. Scripts\GameData.cs" />
     <Compile Include="Assets\02. Scripts\GameMgr1.cs" />
     <Compile Include="Assets\02. Scripts\GameMgr2.cs" />
     <Compile Include="Assets\02. Scripts\GameUI.cs" />
     <Compile Include="Assets\02. Scripts\MonsterCtrl.cs" />
     <Compile Include="Assets\02. Scripts\MyGizmo.cs" />
     <Compile Include="Assets\02. Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\02. Scripts\RockCtrl.cs" />
     <Compile Include="Assets\02. Scripts\SoundMgr.cs" />
     <Compile Include="Assets\02. Scripts\UIMgr.cs" />
     <Compile Include="Assets\02. Scripts\WallCtrl.cs" />
@@ -256,6 +260,7 @@
     <Compile Include="Assets\Single TPS Controller\Scripts\ControleOrbital.cs" />
     <None Include="Assets\Charmander\Tag.txt" />
     <None Include="Assets\05. Models\Pikachu\Tag.txt" />
+    <None Include="Assets\05. Models\Coin\info.txt" />
     <None Include="Assets\05. Models\Pokemon XY\Calem\Tag.txt" />
     <None Include="Assets\06. Monsters\Gengar\Tag.txt" />
     <None Include="Assets\06. Monsters\Charmander\Tag.txt" />
@@ -267,6 +272,7 @@
     <None Include="Assets\06. Monsters\Poliwhirl\Tag.txt" />
     <None Include="Assets\Wii - Super Smash Bros Brawl - Pokemon Trainer\Credit.txt" />
     <None Include="Assets\CactusPack\Shaders\Basic_Rimlight.shader" />
+    <None Include="Assets\05. Models\player\Tag.txt" />
     <None Include="Assets\05. Models\Squirtle\Tag.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/donggunlee/Desktop/Project/Unity/GoHackBurn/PocketShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
