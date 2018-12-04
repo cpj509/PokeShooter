@@ -2465,6 +2465,7 @@ MonoBehaviour:
   companyPrefabs:
   - {fileID: 1719717971014128, guid: b6210d69297414937bd051686f7a7385, type: 2}
   - {fileID: 1064620063243884, guid: ad33c6b4e63a3442ab53589943530523, type: 2}
+  companyEvo: {fileID: 1816110748893930, guid: 19bb9563a6dd64be9b30c37e4febd987, type: 2}
 --- !u!114 &114627036544091060
 MonoBehaviour:
   m_ObjectHideFlags: 1

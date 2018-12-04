@@ -17,6 +17,11 @@ public class GameUI : MonoBehaviour {
     public GameObject[] ballImage;
     public GameObject[] CompanyImage;
 
+    public GameObject[] CompanyShopImage;
+
+    public GameObject evoCha;
+    public GameObject evoChaShop;
+
     //상점 UI
     public GameObject ShopUI;
 
@@ -141,8 +146,28 @@ public class GameUI : MonoBehaviour {
             if (!GameData.m_companyArray[i])
             {
                 CompanyImage[i].SetActive(false);
+                CompanyShopImage[i].SetActive(false);
             }
-            else { CompanyImage[i].SetActive(true); }
+            else 
+            { 
+                CompanyImage[i].SetActive(true);
+                CompanyShopImage[i].SetActive(true);
+                if(i == 1 && GameData.m_evolutionArray[i]){
+                    CompanyImage[i].SetActive(false);
+                    CompanyShopImage[i].SetActive(false);
+                    evoCha.SetActive(true);
+                    evoChaShop.SetActive(true);
+                }
+            }
+        }
+    }
+
+    public void EvolutionB(){
+        if(GameData.m_gold >= 50){
+            GameData.m_gold -= 50;
+            DisGold();
+            GameData.m_evolutionArray[GameData.m_stage] = true;
+            evoChaShop.SetActive(true);
         }
     }
 }

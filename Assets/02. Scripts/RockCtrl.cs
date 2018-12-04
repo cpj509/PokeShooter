@@ -13,11 +13,11 @@ public class RockCtrl : MonoBehaviour {
 	void Update () {
 		
 	}
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "Floor" 
            || other.gameObject.tag == "WALL"){
-            Destroy(gameObject);
+            Destroy(gameObject, 2.0f);
         }
     }
 }

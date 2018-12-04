@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BossCtrl : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class BossCtrl : MonoBehaviour {
     public int meteorNum = 20;
     //private Transform meteorSpawn;
     private Vector3 meteorVec = new Vector3();
+
+    private bool isAlive = true;
 
 	// Use this for initialization
 	void Start () {
@@ -85,7 +88,7 @@ public class BossCtrl : MonoBehaviour {
             hpSlider.value = bossHp;
             if (bossHp <= 0)
             {
-                bossAnim.SetTrigger("isDie");
+                BossDie();
             }
 
             Destroy(collision.gameObject);
@@ -97,7 +100,7 @@ public class BossCtrl : MonoBehaviour {
             hpSlider.value = bossHp;
             if (bossHp <= 0)
             {
-                bossAnim.SetTrigger("isDie");
+                BossDie();
             }
             StartCoroutine(CompanyAttack());
 
@@ -105,17 +108,28 @@ public class BossCtrl : MonoBehaviour {
     }
 
     IEnumerator CompanyAttack(){
-        while(true){
+        while(isAlive){
             yield return new WaitForSeconds(1.0f);
             bossHp -= 10;
             hpSlider.value = bossHp;
             if (bossHp <= 0)
             {
-                bossAnim.SetTrigger("isDie");
+                BossDie();
                 break;
             }
         }
 
+    }
+
+    void BossDie(){
+        bossAnim.SetTrigger("isDie");
+        isAlive = false;
+        StartCoroutine(EndingStage());
+    }
+
+    IEnumerator EndingStage(){
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Ending_Stage");
     }
 
     // Update is called once per frame

@@ -39,6 +39,7 @@ public class PlayerCtrl : MonoBehaviour {
     public int idxCompany = 0;
 
     public GameObject[] companyPrefabs;
+    public GameObject companyEvo;
 
     void Start () {
         canRestart = false;
@@ -59,11 +60,13 @@ public class PlayerCtrl : MonoBehaviour {
             if (GameData.m_companyArray[i])
             {
                 Transform comPos = transform;
-                if(i == 0)
+                if (i == 0 && !GameData.m_evolutionArray[i])
                     Instantiate(companyPrefabs[i], comPos.position + Vector3.right * 3, comPos.rotation);
-                else
+                else if (i == 1 && !GameData.m_evolutionArray[i])
                     Instantiate(companyPrefabs[i], comPos.position + Vector3.left * 3, comPos.rotation);
-                gameUI.SetCompanyImage();
+                else if (i == 1 && GameData.m_evolutionArray[i])
+                    Instantiate(companyEvo, comPos.position + Vector3.left * 3, comPos.rotation);
+                    gameUI.SetCompanyImage();
             }
         }
     }
@@ -142,11 +145,29 @@ public class PlayerCtrl : MonoBehaviour {
             Destroy(coll.gameObject);
             GameData.m_gold += 5;
             gameUI.DisGold();
+            SoundMgr.instance.PlaySound(SoundMgr.instance.coin);
             //sound add
         }
 	}
 
-	void PlayerDie()
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "PUNCH")
+        {
+            hp -= 10;
+            gameUI.DispHP(hp);
+
+
+            Debug.Log("Player HP = " + hp.ToString());
+
+            if (hp <= 0)
+            {
+                PlayerDie();
+            }
+        }
+    }
+
+    void PlayerDie()
 	{
 		Debug.Log ("Player Die!!");
 		OnPlayerDie();
