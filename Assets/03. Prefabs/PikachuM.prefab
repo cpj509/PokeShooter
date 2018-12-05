@@ -155,6 +155,8 @@ MonoBehaviour:
   companyMonster: {fileID: 1719717971014128, guid: b6210d69297414937bd051686f7a7385,
     type: 2}
   playerPos: {fileID: 0}
+  CoinPrefabs: {fileID: 1241529520581332, guid: 1ccb340ee3a084ee1b92d7d63bd0b578,
+    type: 2}
 --- !u!135 &135398920115040568
 SphereCollider:
   m_ObjectHideFlags: 1

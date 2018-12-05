@@ -9,6 +9,7 @@ public class SoundMgr : MonoBehaviour
     public AudioClip bgmOST3; //포켓몬고
     public AudioClip bgmOST4; //포켓몬골드
     public AudioClip soundBallThrowing;
+    public AudioClip coin;
 
     AudioSource myAudio;
     public static SoundMgr instance;

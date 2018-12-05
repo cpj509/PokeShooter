@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01. Scenes/gfPlay1.unity
     guid: 6bd0d62daa5fc433bbddb260835eb61f
+  - enabled: 1
+    path: Assets/01. Scenes/GameField_Desert.unity
+    guid: 6ec202a9ec3f94f96ac38c093323980c
+  - enabled: 1
+    path: Assets/01. Scenes/GameField_Boss.unity
+    guid: fdd5f9a6dcb1c420ab738fc583183978
+  - enabled: 1
+    path: Assets/01. Scenes/Ending_Stage.unity
+    guid: 2037d29e24e9948e9bcf9c0a4e791de1
   m_configObjects: {}

@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{D2282D55-B123-FB38-33D8-A2AD4850CB83}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02. Scripts/CompanyCtrl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02. Scripts/RockCtrl.cs">
     <Files>
-      <File FileName="Assets/02. Scripts/GameMgr1.cs" Line="20" Column="38" />
-      <File FileName="Assets/02. Scripts/FireTPS.cs" Line="19" Column="74" />
-      <File FileName="Assets/02. Scripts/FireCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets/02. Scripts/BallCtrl.cs" Line="14" Column="5" />
-      <File FileName="Assets/Single TPS Controller/Scripts/ControladorDePersonagem.cs" Line="58" Column="11" />
-      <File FileName="Assets/02. Scripts/SoundMgr.cs" Line="30" Column="6" />
-      <File FileName="Assets/02. Scripts/PlayerCtrl.cs" Line="40" Column="1" />
-      <File FileName="Assets/02. Scripts/UIMgr.cs" Line="11" Column="1" />
-      <File FileName="Assets/02. Scripts/GameUI.cs" Line="1" Column="1" />
-      <File FileName="Assets/02. Scripts/CompanyCtrl.cs" Line="69" Column="31" />
-      <File FileName="Assets/02. Scripts/MonsterCtrl.cs" Line="211" Column="1" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/CompanyCtrl.cs" Line="47" Column="1" />
+      <File FileName="Assets/02. Scripts/GameData.cs" Line="9" Column="69" />
+      <File FileName="Assets/02. Scripts/BossCtrl.cs" Line="127" Column="37" />
+      <File FileName="Assets/02. Scripts/PlayerCtrl.cs" Line="68" Column="43" />
+      <File FileName="Assets/02. Scripts/DanceCtrl.cs" Line="12" Column="32" />
+      <File FileName="Assets/02. Scripts/GameUI.cs" Line="163" Column="6" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/FireTPS.cs" Line="26" Column="80" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/BallCtrl.cs" Line="15" Column="1" NotebookId="1" />
+      <File FileName="Assets/Single TPS Controller/Scripts/ControladorDePersonagem.cs" Line="58" Column="11" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/SoundMgr.cs" Line="12" Column="27" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/UIMgr.cs" Line="18" Column="9" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/MonsterCtrl.cs" Line="42" Column="1" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/RockCtrl.cs" Line="19" Column="44" NotebookId="1" />
+      <File FileName="Assets/02. Scripts/GameMgr1.cs" Line="35" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
